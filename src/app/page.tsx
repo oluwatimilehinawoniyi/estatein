@@ -1,101 +1,55 @@
+import Button from "@/components/atoms/Button";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <section className="padding">
+      <div className="max-w-7xl mx-auto space-y-4">
+        <div className="flex flex-col gap-4">
+          <div className="">
+            <Image src="/images/hero.png" alt="hero" className="bg-center bg-cover bg-no-repeat rounded-2xl border border-white/5" width={1000} height={100} style={{ backgroundImage: "url(/Abstract-hero.svg)" }} />
+          </div>
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h1 className="lg:text-[46px] font-semibold text-[28px] leading-[120%] capitalize">Discover your dream property with estatein</h1>
+              <p className="">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Button className="bg-background hover:bg-primary w-full">learn more</Button>
+              <Button className="bg-primary hover:bg-background hover:border-primary w-full">browse properties</Button>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="grid grid-rows-2 grid-cols-2 w-full gap-4">
+              {
+                [{ numbers: 200, title: 'happy customers' }, { numbers: 435, title: 'properties for clients' }, { numbers: 16, title: 'years of experience' }].map(({ numbers, title }, index) => (
+                  <div className={`rounded-lg w-full flex items-center justify-center flex-col px-2 py-3 bg-background-grey ${index == 2 ? 'col-span-2' : ''}`} key={numbers}>
+                    <h2 className="text-2xl font-bold ">{numbers}{index == 1 && 'k'}+</h2>
+                    <p className="text-white/60 capitalize font-medium text-sm">{title}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="bg-background border-border border drop-shadow-[0_0_4px_rgb(25,25,25)] rounded-xl h-auto grid grid-cols-2 grid-rows-2">
+          {
+            [
+              { title: 'find your dream home', src: '/icon/stall.svg' }
+              , { title: 'unlock property value', src: '/icon/fund.svg' }
+              , { title: 'effortless property management', src: '/icon/home.svg' }
+              , { title: 'smart investments, informed decision', src: '/icon/sun.svg' }
+            ].map((item, index) => (
+              <div className="relative flex flex-col" key={index}>
+                <Image src={'icon/arrowAngle.svg'} alt="arrow" width={20} height={20} className="absolute right-4 top-4" />
+                <div className="">
+                  <Image src={item.src} alt={item.title + 'icon'} className=" " width={30} height={30} />
+                </div>
+                <p className="text-center capitalize font-semibold text-sm leading-[150%]">{item.title}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
   );
 }

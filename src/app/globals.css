@@ -3,19 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #141414;
+  --background-grey: #1a1a1a;
+  --foreground: #fff;
+  --primary: #703bf7;
+  --border: #262626;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-urbanist);
+}
+
+@layer components {
+  .padding {
+    @apply md:px-8 p-4;
+  }
 }
