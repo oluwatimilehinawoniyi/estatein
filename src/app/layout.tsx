@@ -3,6 +3,8 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Ads from "@/components/ads";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ExploreProperties from "@/components/ExploreProperties";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -27,6 +29,8 @@ export default function RootLayout({
         <Ads />
         <Navbar />
         {children}
+        <ExploreProperties />
+        <Footer />
       </body>
     </html>
   );

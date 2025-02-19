@@ -1,12 +1,28 @@
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 interface ButtonProps {
     children: React.ReactNode;
     className?: string;
+    onClick?: () => void;
+    href?: string;
 }
 
-export default function Button({ children, className }: ButtonProps) {
+export default function Button({ children, className, onClick, href }: ButtonProps) {
+    const baseClasses =
+        "border-2 border-border transition-all ease-linear text-white px-4 py-2 rounded-lg capitalize";
+
+    if (href) {
+        return (
+            <Link href={href} className={twMerge(baseClasses, className)}>
+                {children}
+            </Link>
+        );
+    }
+
     return (
-        <button className={twMerge(" border-2 border-border transition-all ease-linear text-white px-4 py-2 rounded-lg capitalize", className)}>{children}</button>
-    )
+        <button onClick={onClick} className={twMerge(baseClasses, className)}>
+            {children}
+        </button>
+    );
 }
