@@ -8,6 +8,8 @@
   --foreground: #fff;
   --primary: #703bf7;
   --border: #262626;
+  --animate-spins: spins 5s linear infinite;
+  --animate-spin-reverse: spin-reverse 10s linear infinite;
 }
 
 body {
@@ -19,5 +21,16 @@ body {
 @layer components {
   .padding {
     @apply md:px-8 p-4;
+  }
+}
+
+@keyframes spin-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spins {
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -15,6 +15,10 @@ export default {
         primary: "var(--primary)",
         border: "var(--border)",
       },
+      animation: {
+        "spin-reverse": "var(--animate-spin-reverse)",
+        spins: "var(--animate-spins)",
+      },
     },
   },
   plugins: [],
