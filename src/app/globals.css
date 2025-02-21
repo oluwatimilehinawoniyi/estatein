@@ -12,6 +12,30 @@
   --animate-spin-reverse: spin-reverse 10s linear infinite;
 }
 
+/* Thin and styled scrollbar */
+.UI_Mapper::-webkit-scrollbar {
+  height: 5px;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+  width: 15px;
+}
+
+.UI_Mapper::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+.UI_Mapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
