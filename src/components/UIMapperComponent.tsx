@@ -1,15 +1,12 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Button from "./atoms/Button";
-import Stars from "./atoms/Stars";
 import { ElementType } from "react";
-// import { motion } from "framer-motion";
-// import { motion } from "motion/react"
-
+import HeaderTextComponent from "./atoms/HeaderTextComponent";
 
 interface UIMapperComponentProps<T> {
     title: string;
     description: string;
-    button: string;
+    button: string | null;
     data: T[];
     Component: ElementType;
 }
@@ -17,15 +14,12 @@ interface UIMapperComponentProps<T> {
 export default function UIMapperComponent<T>({ title, description, button, data, Component }: UIMapperComponentProps<T>) {
     return (
         <section className="padding">
-            <div className="space-y-6 max-w-7xl mx-auto">
-                <Stars />
-                <div className="flex justify-between items-end">
-                    <div className="md:w-2/3">
-                        <h1 className="capitalize text-[28px] md:text-[38px] lg:text-[28px] font-semibold leading-[150%]">{title}</h1>
-                        <p className="font-medium text-sm md:text-base lg:text-lg text-white/60">{description}</p>
-                    </div>
-                    <Button className="hidden md:block w-max">{button}</Button>
-                </div>
+            <div className="space-y-6 max-w-[1400px] mx-auto">
+                <HeaderTextComponent
+                    title={title}
+                    description={description}
+                    button={button}
+                />
                 <section className="overflow-hidden">
                     <div
                         // drag="x"

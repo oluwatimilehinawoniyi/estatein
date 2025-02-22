@@ -1,7 +1,7 @@
 import FAQCard from "@/components/FAQCard";
-import Hero from "@/components/Hero";
+import { Hero } from "@/components/Hero";
 import PropertyCard from "@/components/PropertyCard";
-import TestimonialCard from "@/components/Testimonial";
+import { TestimonialCardOne } from "@/components/Testimonial";
 import UIMapperComponent from "@/components/UIMapperComponent";
 import { faqs } from "@/data/faq";
 import { properties } from "@/data/properties";
@@ -26,7 +26,7 @@ export default function Home() {
           description="Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs."
           button="view all testimonials"
           data={testimonials}
-          Component={TestimonialCard}
+          Component={TestimonialCardOne}
         />
 
         <UIMapperComponent

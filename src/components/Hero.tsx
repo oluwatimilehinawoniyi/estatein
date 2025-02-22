@@ -1,10 +1,11 @@
 import Button from "@/components/atoms/Button";
 import Image from "next/image";
+import Stars from "./atoms/Stars";
 
-export default function Hero() {
+export function Hero() {
     return (
         <section className="padding">
-            <div className="max-w-7xl mx-auto space-y-4">
+            <div className="max-w-[1400px] mx-auto space-y-4">
                 <div className="flex md:flex-row-reverse flex-col gap-4 py-4 md:h-[480px] md:items-end md:gap-6">
                     <div className="overflow-hidden relative w-full h-[300px] md:h-full">
                         <Image src="/images/hero.png" alt="hero" className="bg-center object-cover object-center bg-cover bg-no-repeat rounded-2xl border border-white/5" fill style={{ backgroundImage: "url(/Abstract-hero.svg)" }} />
@@ -30,7 +31,7 @@ export default function Hero() {
 
                         <div className="space-y-2">
                             <h1 className="lg:text-[46px] md:text-[38px] font-semibold text-[28px] leading-[120%] capitalize md:w-4/5">Discover your dream property with estatein</h1>
-                            <p className="md:w-4/5">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
+                            <p className="md:w-4/5 text-white/60">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
                         </div>
                         <div className="flex flex-col md:w-2/3 items-center md:flex-row gap-4">
                             <Button href="/about" className="bg-background hover:bg-primary w-full md:py-4">learn more</Button>
@@ -66,6 +67,36 @@ export default function Hero() {
                             </div>
                         ))
                     }
+                </div>
+            </div>
+        </section>
+    )
+}
+export function AboutHero() {
+    return (
+        <section className="padding">
+            <div className="max-w-[1400px] mx-auto space-y-4">
+                <div className="flex md:flex-row-reverse flex-col gap-4 py-4 md:h-[480px] md:items-end md:gap-6">
+                    <div className="overflow-hidden relative w-full h-[300px] md:h-full">
+                        <Image src="/images/about.png" alt="hero" className="bg-center object-cover object-center bg-cover bg-no-repeat rounded-2xl border border-white/5" fill style={{ backgroundImage: "url(/Abstract-hero.svg)" }} />
+                    </div>
+                    <div className="w-full flex flex-col gap-4 justify-between relative pt-4 md:pt-0 md:gap-8">
+                        <div className="space-y-2">
+                            <Stars />
+                            <h1 className="lg:text-[46px] md:text-[38px] font-semibold text-[28px] leading-[120%] capitalize md:w-4/5">our journey</h1>
+                            <p className="text-white/60 md:w-4/5">Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary. Over the years, we&apos;ve expanded our reach, forged valuable partnerships, and gained the trust of countless clients.</p>
+                        </div>
+                        <div className="grid grid-rows-2 grid-cols-2 w-full gap-4 md:grid-cols-3 md:grid-rows-1">
+                            {
+                                [{ numbers: 200, title: 'happy customers' }, { numbers: 435, title: 'properties for clients' }, { numbers: 16, title: 'years of experience' }].map(({ numbers, title }, index) => (
+                                    <div className={`rounded-lg w-full flex items-center justify-center flex-col px-2 py-3 bg-background-grey md:py-6 ${index == 2 ? 'col-span-2 md:col-span-1' : ''}`} key={numbers}>
+                                        <h2 className="text-2xl font-bold ">{numbers}{index == 1 && 'k'}+</h2>
+                                        <p className="text-white/60 capitalize font-medium text-sm text-center">{title}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
