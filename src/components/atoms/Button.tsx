@@ -10,7 +10,7 @@ interface ButtonProps {
 
 export default function Button({ children, className, onClick, href }: ButtonProps) {
     const baseClasses =
-        "border-2 border-border transition-all ease-linear text-white px-4 py-2 rounded-lg capitalize";
+        "border-2 border-border text-center transition-all ease-linear text-white px-4 py-2 rounded-lg capitalize";
 
     if (href) {
         return (

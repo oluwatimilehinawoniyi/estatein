@@ -36,6 +36,10 @@
   background: transparent;
 }
 
+* {
+  line-height: 150%;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
