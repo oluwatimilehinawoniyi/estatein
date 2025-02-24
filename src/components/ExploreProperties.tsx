@@ -4,7 +4,7 @@ import Button from "./atoms/Button";
 export default function ExploreProperties() {
     return (
         <section className="padding">
-            <div className="bg-backgrond py-10 relative flex items-center flex-col gap-6 md:flex-row justify-between max-w-[1400px] mx-auto bg-right-bottom bg-contain bg-no-repeat"
+            <div className="bg-backgrond padding py-10 relative flex items-center flex-col gap-6 md:flex-row justify-between max-w-[1400px] mx-auto bg-right-bottom bg-contain bg-no-repeat"
                 style={{ backgroundImage: "url(/exploreAbstract1.svg)" }}
             >
                 <Image src={'/exploreAbstract2.svg'} fill alt="abstract design" className="object-cover" />

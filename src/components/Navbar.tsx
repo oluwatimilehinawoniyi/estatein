@@ -28,7 +28,7 @@ function NavLists() {
                 <Link href="/services" className="transition-colors hover:text-primary">services</Link>
             </ul>
 
-            <Button className="bg-background hover:bg-primary">contact us</Button>
+            <Button href="/contact" className="bg-background hover:bg-primary">contact us</Button>
         </div>
     )
 }
