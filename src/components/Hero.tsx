@@ -103,7 +103,7 @@ export function AboutHero() {
 export function PlainHero({ title, paragraph }: { title: string, paragraph: string }) {
     return (
 
-        <UIWrapper className="py-16 flex items-start justify-center bg-background">
+        <UIWrapper className="py-10 md:py-16 flex items-start justify-center bg-background">
             <div className="space-y-6">
                 <h1 className="capitalize text-[28px] md:text-[38px] font-semibold ">{title}</h1>
                 <p className="text-sm md:text-base text-white/60 leading-[150%] lg:w-4/6">{paragraph}</p>

@@ -39,7 +39,7 @@ const ContactMethod = () => {
                 {/* Phone Option */}
                 <button
                     type="button"
-                    className={`flex items-center gap-4 p-3 rounded-md border w-full text-white transition ${selectedMethod === "phone"
+                    className={`flex items-center gap-4 p-3 rounded-md border w-full text-left text-sm md:text-base text-white transition ${selectedMethod === "phone"
                         ? "border-primary ring-1 ring-primary"
                         : "border-border bg-background-grey"
                         } ${contactValues.email ? "opacity-50 cursor-not-allowed" : ""}`}
@@ -63,14 +63,14 @@ const ContactMethod = () => {
                             autoFocus
                         />
                     ) : (
-                        contactValues.phone || "Enter Your Number"
+                        contactValues.phone || "via Number"
                     )}
                 </button>
 
                 {/* Email Option */}
                 <button
                     type="button"
-                    className={`flex items-center gap-4 p-3 rounded-md border w-full text-white transition ${selectedMethod === "email"
+                    className={`flex items-center gap-4 p-3 rounded-md border w-full text-left text-sm md:text-base text-white transition ${selectedMethod === "email"
                         ? "border-primary ring-1 ring-primary"
                         : "border-border bg-background-grey"
                         } ${contactValues.phone ? "opacity-50 cursor-not-allowed" : ""}`}
@@ -94,7 +94,7 @@ const ContactMethod = () => {
                             autoFocus
                         />
                     ) : (
-                        contactValues.email || "Enter Your Email"
+                        contactValues.email || "via Email"
                     )}
                 </button>
             </div>

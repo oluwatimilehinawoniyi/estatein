@@ -5,15 +5,18 @@ import { Calendar, Gem, Home, MapPin, Ruler, Search } from "lucide-react"
 
 export default function PropertySearch() {
     return (
-        <UIWrapper className="flex max-w-6xl flex-col items-center">
-            <div className="flex items-center w-full max-w-4xl mx-auto px-3 py-2 rounded-t-lg bg-background border-background-grey border-x-8 border-t-8">
+        <UIWrapper className="flex max-w-6xl gap-4 md:gap-0 flex-col items-center">
+            <div className="flex items-center w-full max-w-4xl mx-auto px-3 py-2 rounded-t-lg rounded-b-lg md:rounded-b-none bg-background border-background-grey border-b-8 md:border-b-0 border-x-8 border-t-8">
                 <input
                     type="text"
                     placeholder="Search For A Property"
                     className="flex-1 bg-transparent  text-white px-4 h-full outline-none placeholder-white/40"
                 />
                 <Button className="bg-primary text-white py-2 rounded-lg flex items-center gap-2">
-                    <Search className="" size={20} /> Find Property
+                    <Search className="" size={20} />
+                    <p className="hidden md:block">
+                        Find Property
+                    </p>
                 </Button>
             </div>
 
