@@ -2,7 +2,7 @@
 import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-export default function CustomSelect({ options, placeholder }: { options: string[]; placeholder: string }) {
+export default function CustomSelect({ options, placeholder }: { options: string[]; placeholder: React.ReactNode }) {
     const [selected, setSelected] = useState(placeholder);
     const [open, setOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -29,7 +29,7 @@ export default function CustomSelect({ options, placeholder }: { options: string
                 <ChevronDown size={20} className={`${open ? 'rotate-180' : ''} transition-transform`} />
             </div>
             {open && (
-                <ul className="absolute w-full bg-[#1a1a1a] border border-border rounded-md mt-1 z-10">
+                <ul className="absolute w-full bg-background border border-border overflow-hidden rounded-md mt-1 z-10">
                     {options.map((option, index) => (
                         <li
                             key={index}
