@@ -32,7 +32,7 @@ export default function Home() {
         <UIMapperComponent
           title="frequently asked questions"
           description="Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way."
-          button="view all FAQs"
+          button={null}
           data={faqs}
           Component={FAQCard}
         />

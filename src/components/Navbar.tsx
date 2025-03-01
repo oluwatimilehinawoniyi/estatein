@@ -5,7 +5,7 @@ import Menu from "./atoms/Menu";
 
 export default function Navbar() {
     return (
-        <nav className="bgbackground-grey py-4 padding sticky top-0 z-50 backdrop-blur-md">
+        <nav className="bg-background-grey py-4 padding sticky top-0 z-50">
             <div className="flex items-center justify-between max-w-[1400px] mx-auto">
                 <Link href="/">
                     <Logo />

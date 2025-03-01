@@ -3,6 +3,7 @@ import { Bed, Bath, Home } from "lucide-react";
 import Image from "next/image";
 
 interface PropertyCardProps {
+    id: string;
     image: string;
     title: string;
     description: string;
@@ -12,7 +13,7 @@ interface PropertyCardProps {
     type: string;
 }
 
-export default function PropertyCard({ image, title, description, price, bedrooms, bathrooms, type }: PropertyCardProps) {
+export default function PropertyCard({ id, image, title, description, price, bedrooms, bathrooms, type }: PropertyCardProps) {
     return (
         <div className="bg-background border border-border  rounded-xl p-4 min-w-[350px] w-[350px] md:w-[400px] md:min-w-[400px] space-y-4">
             <Image src={image} alt={title} width={100} height={100} className="rounded-[10px] w-full object-cover" />
@@ -42,7 +43,7 @@ export default function PropertyCard({ image, title, description, price, bedroom
                     <p className="text-white text-lg md:text-xl lg:text-2xl font-semibold">{Number(price).toLocaleString("en-NG", { style: "currency", currency: "NGN" })}</p>
                 </div>
 
-                <Button className="w-max bg-primary">View Property Details</Button>
+                <Button href={`/properties/${id}`} className="w-max bg-primary">View Property Details</Button>
             </div>
         </div>
     );
