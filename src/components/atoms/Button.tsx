@@ -14,7 +14,7 @@ export default function Button({ children, className, onClick, href }: ButtonPro
 
     if (href) {
         return (
-            <Link href={href} className={twMerge(baseClasses, className)}>
+            <Link href={href} prefetch={true} className={twMerge(baseClasses, className)}>
                 {children}
             </Link>
         );

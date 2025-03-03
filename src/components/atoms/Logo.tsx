@@ -1,7 +1,7 @@
 
 export default function Logo() {
     return (
-        <div className="w-auto h-8">
+        <div className="w-max h-8">
             <svg className="size-full" viewBox="0 0 160 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 48.5C10.7467 48.5 0 37.7533 0 24.5H24V48.5Z" fill="#703BF7" />
                 <path d="M0 0.5C13.2533 0.5 24 11.2467 24 24.5H0V0.5Z" fill="#703BF7" />

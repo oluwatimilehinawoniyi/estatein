@@ -4,6 +4,7 @@ import PropertyAdditionalSingleCell from "@/components/atoms/PropertyAdditionalS
 import Stars from "@/components/atoms/Stars"
 import UIWrapper from "@/components/atoms/UIWrapper"
 import FAQCard from "@/components/FAQCard"
+import PropertyGallery from "@/components/PropertyGallery"
 import UIMapperComponent from "@/components/UIMapperComponent"
 import { faqs } from "@/data/faq"
 import { properties, Property } from "@/data/properties"
@@ -19,8 +20,8 @@ export default async function Page({
     const property: Property | undefined = properties?.find(p => p.id == slug);
 
     return <div className="space-y-6">
-        <UIWrapper className="flex items-center justify-between gap-4 flex-col md:flex-row">
-            <div className="text-white flex items-center gap-4">
+        <UIWrapper className="flex md:items-center justify-between gap-4 flex-col md:flex-row">
+            <div className="text-white flex justify-between items-center gap-4">
                 <h2 className="capitalize font-semibold text-xl leading-[150%] md:text-2xl lg:text-3xl ">{property?.title}</h2>
                 <div className="flex items-center gap-2 py-1 px-2 border-border border bg-background capitalize rounded-md">
                     <MapPin size={18} />
@@ -40,13 +41,16 @@ export default async function Page({
 
         </UIWrapper>
 
-        {/* Property: {property.title} */}
+        <UIWrapper>
+            <PropertyGallery />
+        </UIWrapper>
+
         <UIWrapper className="flex min-[800px]:flex-row flex-col gap-4 items-start w-full">
             <div className="rounded-[10px] space-y-4 p-8 border border-border min-[800px]:w-1/2">
                 <h2 className=" font-semibold text-lg md:text-xl lg:text-2xl">Description</h2>
                 <p className="">Discover your own piece of paradise with the {property?.title}. With {property?.description}, this property is the epitome of exclusive living in the best of {property?.type}s.</p>
                 <hr className="my-2 border border-background-grey" />
-                <div className=" flex items-start justify-between gap-4">
+                <div className=" flex items-start flex-wrap justify-between gap-4">
                     <div className="space-y-2">
                         <span className="flex items-center gap-2 text-white/60 text-sm lg:text-base">
                             <Bed size={20} />
@@ -146,7 +150,7 @@ export default async function Page({
             />
 
             <div className="border border-border rounded-xl p-4 md:py-2 flex flex-col md:flex-row items-center gap-4 bg-background-grey">
-                <h2 className="font-semibold md:text-xl text-primary pb-4 border-b md:pr-4 md:border-b-0 md:pb-0 md:border-r border-border capitalize ">note</h2>
+                <h2 className="font-semibold md:text-xl w-full md:w-max text-primary pb-4 border-b md:pr-4 md:border-b-0 md:pb-0 md:border-r border-border capitalize ">note</h2>
                 <p className="text-white/60 font-medium text-sm md:text-base">The figures provided above are estimates and may vary depending on the property, location, and individual circumstances.</p>
             </div>
 
