@@ -11,8 +11,30 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Estatein",
-  description: "Real Estate Company",
+  title: "Estatein - Find Your Dream Property",
+  description: "Discover luxurious homes and properties effortlessly.",
+  openGraph: {
+    title: "Estatein - Find Your Dream Property",
+    description: "Explore luxurious homes and properties effortlessly.",
+    url: "https://estatein.oluwatimilehinawoniyi.com/",
+    siteName: "Estatein",
+    images: [
+      {
+        url: "/screenCard.png",
+        width: 1200,
+        height: 630,
+        alt: "Estatein - Find Your Dream Property",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Estatein - Find Your Dream Property",
+    description: "Explore luxurious homes and properties effortlessly.",
+    images: ["/screenCard.png"],
+    site: "@timmyawoniyi",
+  },
 };
 
 export default function RootLayout({
