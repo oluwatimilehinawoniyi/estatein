@@ -34,7 +34,7 @@ export default function Navbar() {
                         initial={{ x: "-100%" }}
                         animate={{ x: isOpen ? 0 : "-100%" }}
                         transition={{ type: "tween", duration: 0.3 }}
-                        className="fixed top-0 left-0 w-2/3 h-screen bg-background text-white flex flex-col gap-8 p-8 text-lg md:hidden z-40"
+                        className="fixed top-0 left-0 w-2/3 h-screen bg-background text-white flex flex-col gap-8 p-8 text-lg lg:hidden z-40"
                     >
                         <Logo />
                         <ul className="flex flex-col gap-8 *:w-max">
@@ -49,7 +49,7 @@ export default function Navbar() {
 
                     {isOpen && (
                         <div
-                            className="fixed inset-0 bg-background-grey opacity-80 md:hidden z-30"
+                            className="fixed inset-0 bg-background-grey opacity-80 lg:hidden z-30"
                             onClick={() => setIsOpen(false)}
                         ></div>
                     )}
@@ -64,7 +64,7 @@ function NavLists() {
     const pathname = usePathname()
 
     return (
-        <div className="hidden md:flex justify-between items-center gap-8 md:w-2/3">
+        <div className="hidden lg:flex justify-between items-center gap-8 lg:w-2/3">
             <ul className="flex items-center space-x-8 *:capitalize">
                 {['home', 'about', 'properties', 'services'].map((item, index) => (
                     <Link
