@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Estatein",
     images: [
       {
-        url: "/screenCard.png",
+        url: "https://res.cloudinary.com/dxyxebnmu/image/upload/v1740990755/vy4373zu8nrfqsaflifr.png",
         width: 1200,
         height: 630,
         alt: "Estatein - Find Your Dream Property",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Estatein - Find Your Dream Property",
     description: "Explore luxurious homes and properties effortlessly.",
-    images: ["/screenCard.png"],
+    images: ["https://res.cloudinary.com/dxyxebnmu/image/upload/v1740990755/vy4373zu8nrfqsaflifr.png"],
     site: "@timmyawoniyi",
   },
 };
