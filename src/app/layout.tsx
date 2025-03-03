@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import Ads from "@/components/ads";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ExploreProperties from "@/components/ExploreProperties";
@@ -26,7 +25,6 @@ export default function RootLayout({
       <body
         className={`${urbanist.variable} antialiased`}
       >
-        <Ads />
         <Navbar />
         {children}
         <ExploreProperties />

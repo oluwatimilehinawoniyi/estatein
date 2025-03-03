@@ -35,7 +35,7 @@ export default function UIMapperComponent<T>({ title, description, button, data,
                 {button && <Button className="w-max md:hidden">{button}</Button>}
                 <p className="hidden md:block">01 of 10</p>
 
-                <div className="w-full md:w-max justify-between md:justify-normal flex items-center gap-4">
+                <div className="w-max justify-between md:justify-normal flex items-center gap-4">
                     <span className="border rounded-full p-1 cursor-pointer"><ArrowLeft /></span>
                     <p className="md:hidden">01 of 10</p>
                     <span className="border rounded-full p-1 cursor-pointer"><ArrowRight /></span>
