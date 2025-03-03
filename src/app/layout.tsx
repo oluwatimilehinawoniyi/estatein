@@ -12,7 +12,7 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
   title: "Estatein - Find Your Dream Property",
-  description: "Discover luxurious homes and properties effortlessly.",
+  description: "Discover luxurious homes and properties effortlessly",
   openGraph: {
     title: "Estatein - Find Your Dream Property",
     description: "Explore luxurious homes and properties effortlessly.",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Estatein - Find Your Dream Property",
-    description: "Explore luxurious homes and properties effortlessly.",
+    description: "Explore luxurious homes and properties effortlessly",
     images: ["https://res.cloudinary.com/dxyxebnmu/image/upload/v1740990755/vy4373zu8nrfqsaflifr.png"],
     site: "@timmyawoniyi",
   },
