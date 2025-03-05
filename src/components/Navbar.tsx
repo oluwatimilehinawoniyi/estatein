@@ -19,9 +19,9 @@ export default function Navbar() {
             <AnimatePresence>
                 <Ads />
                 <nav className="py-4 padding">
-                    <div className="flex items-center justify-between max-w-[1400px] mx-auto">
-                        <div className="md:w-2/5 flex items-start">
-                            <Link href="/" className="wmax">
+                    <div className="flex items-start md:items-center justify-between max-w-[1400px] mx-auto">
+                        <div className="md:w-2/5 w-max flex items-start">
+                            <Link href="/" className="w-max">
                                 <Logo />
                             </Link>
                         </div>
