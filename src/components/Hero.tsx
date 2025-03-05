@@ -5,7 +5,7 @@ import UIWrapper from "./atoms/UIWrapper";
 
 export function Hero() {
     return (
-        <UIWrapper className="space-y-4">
+        <UIWrapper className="space-y-4  md:pt-12 lg:mt-0">
             <div className="flex md:flex-row-reverse flex-col gap-4 py-4 md:h-[480px] md:items-end md:gap-8">
                 <div className="overflow-hidden relative w-full h-[300px] md:h-full">
                     <Image src="/images/hero.png" alt="hero" className="bg-center object-cover object-center bg-cover bg-no-repeat rounded-2xl border border-white/5" fill style={{ backgroundImage: "url(/Abstract-hero.svg)" }} />
@@ -30,12 +30,12 @@ export function Hero() {
                     </svg>
 
                     <div className="space-y-2">
-                        <h1 className="lg:text-[46px] md:text-[38px] font-semibold text-[28px] leading-[120%] capitalize md:w-4/5">Discover your dream property with estatein</h1>
+                        <h1 className="lg:text-[46px] md:text-[38px] font-semibold text-[28px] leading-[120%] capitalize md:w-5/6 lg:w-4/5">Discover your dream property with estatein</h1>
                         <p className="md:w-4/5 text-white/60">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
                     </div>
-                    <div className="flex flex-col md:w-2/3 items-center md:flex-row gap-4">
-                        <Button href="/about" className="bg-background hover:bg-primary w-full md:py-4">learn more</Button>
-                        <Button href="/properties" className="bg-primary hover:bg-background hover:border-primary w-full md:py-4">browse properties</Button>
+                    <div className="flex flex-col lg:w-2/3 items-center md:flex-row gap-4">
+                        <Button href="/about" className="bg-background hover:bg-primary w-full md:py-4 md:px-2 lg:px-4">learn more</Button>
+                        <Button href="/properties" className="bg-primary hover:bg-background hover:border-primary w-full md:py-4 md:px-2 lg:px-4">browse properties</Button>
                     </div>
 
                     <div className="grid grid-rows-2 grid-cols-2 w-full gap-4 md:grid-cols-3 md:grid-rows-1">
