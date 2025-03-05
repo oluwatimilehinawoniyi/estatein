@@ -61,7 +61,7 @@ export function Hero() {
                         <div className="relative flex flex-col items-center justify-center py-4 px-2 rounded-xl bg-background-grey gap-2 md:gap-4" key={index}>
                             <Image src={'icon/arrowAngle.svg'} alt="arrow" width={15} height={15} className="absolute right-4 top-4" />
                             <div className="">
-                                <Image src={item.src} alt={item.title + 'icon'} className=" " width={25} height={25} />
+                                <Image src={item.src} alt={item.title + 'icon'} className="" width={25} height={25} />
                             </div>
                             <p className="sm:w-[96%] md:w-2/3 lg:w-1/2 text-center capitalize font-semibold text-sm md:text-base lg:text-xl leading-[150%]">{item.title}</p>
                         </div>

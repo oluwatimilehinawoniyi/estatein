@@ -20,11 +20,11 @@ export default function Navbar() {
                 <Ads />
                 <nav className="py-4 padding">
                     <div className="flex items-start md:items-center justify-between max-w-[1400px] mx-auto">
-                        <div className="md:w-2/5 w-max flex items-start">
-                            <Link href="/" className="w-max">
-                                <Logo />
-                            </Link>
-                        </div>
+                        {/* <div className="md:w-2/5 w-max flex items-start"> */}
+                        <Link href="/" className="w-max block`">
+                            <Logo />
+                        </Link>
+                        {/* </div> */}
                         <NavLists />
                         <Menu isOpen={isOpen} toggleMenu={() => setIsOpen(!isOpen)} />
                     </div>
@@ -38,9 +38,9 @@ export default function Navbar() {
                     >
                         <Logo />
                         <ul className="flex flex-col gap-8 *:w-max">
-                            {['home', 'about', 'properties', 'services'].map((item, index) => (
+                            {['home', 'about', 'properties', 'services'].map((item) => (
                                 <Link
-                                    key={index}
+                                    key={item}
                                     href={item === 'home' ? '/' : `/${item}`}
                                     onClick={() => setIsOpen(false)}
                                     className="capitalize transition-colors hover:text-primary"
@@ -72,9 +72,9 @@ function NavLists() {
     return (
         <div className="hidden lg:flex justify-between items-center gap-8 lg:w-2/3">
             <ul className="flex items-center space-x-8 *:capitalize">
-                {['home', 'about', 'properties', 'services'].map((item, index) => (
+                {['home', 'about', 'properties', 'services'].map((item) => (
                     <Link
-                        key={index}
+                        key={item}
                         href={item === 'home' ? '/' : `/${item}`}
                         className={`${pathname === `/${item}` || (item === 'home' && pathname === '/') ? 'text-primary bg-background rounded-lg border border-border' : 'text-white'} transition-colors hover:text-primary py-2 px-4`}>{item}</Link>
                 ))}
