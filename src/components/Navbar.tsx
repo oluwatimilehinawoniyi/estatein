@@ -20,11 +20,10 @@ export default function Navbar() {
                 <Ads />
                 <nav className="py-4 padding">
                     <div className="flex items-start md:items-center w-full justify-between max-w-[1400px] mx-auto">
-                        {/* <div className="md:w-2/5 w-max flex items-start"> */}
+
                         <Link href="/" className="block">
                             <Logo />
                         </Link>
-                        {/* </div> */}
 
                         <NavLists />
                         <Menu isOpen={isOpen} toggleMenu={() => setIsOpen(!isOpen)} />
