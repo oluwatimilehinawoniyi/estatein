@@ -21,7 +21,7 @@ export default function Navbar() {
                 <nav className="py-4 padding">
                     <div className="flex items-start md:items-center w-full justify-between max-w-[1400px] mx-auto">
 
-                        <Link href="/" className="block border border-red-500">
+                        <Link href="/" className="block">
                             <Logo />
                         </Link>
 
