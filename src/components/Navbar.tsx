@@ -38,10 +38,16 @@ export default function Navbar() {
                     >
                         <Logo />
                         <ul className="flex flex-col gap-8 *:w-max">
-                            <Link href='/' className="transition-colors hover:text-primary">Home</Link>
-                            <Link href='/about' className="transition-colors hover:text-primary">About</Link>
-                            <Link href="/properties" className="transition-colors hover:text-primary">Properties</Link>
-                            <Link href="/services" className="transition-colors hover:text-primary">Services</Link>
+                            {['home', 'about', 'properties', 'services'].map((item, index) => (
+                                <Link
+                                    key={index}
+                                    href={item === 'home' ? '/' : `/${item}`}
+                                    onClick={() => setIsOpen(false)}
+                                    className="capitalize transition-colors hover:text-primary"
+                                >
+                                    {item}
+                                </Link>
+                            ))}
                         </ul>
                         <Button href="/contact" className="bg-background hover:bg-primary mt-auto">Contact Us</Button>
                     </motion.div>

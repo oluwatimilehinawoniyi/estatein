@@ -1,3 +1,4 @@
+"use client";
 import Button from "@/components/atoms/Button";
 
 interface FAQCardProps {

@@ -50,10 +50,10 @@ export default function Services() {
 
                             >
                                 <div className="flex items-center gap-4 justify-between">
-                                    <div className="flex items-center gap-6">
+                                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
                                         {
                                             service.icon &&
-                                            <Image src={service.icon} alt={service.title} width={100} height={100} className="size-9" />
+                                            <Image src={service.icon} alt={service.title} width={50} height={50} className="size-9" />
                                         }
                                         <h3 className={`text-white ${service.gridSpan == "double" ? 'text-2xl' : 'text-lg'} font-semibold capitalize`}>{service.title}</h3>
                                     </div>
@@ -85,7 +85,7 @@ export default function Services() {
 
                             >
                                 <div className="flex items-center gap-4 justify-between">
-                                    <div className="flex items-center gap-6">
+                                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
                                         {
                                             service.icon &&
                                             <Image src={service.icon} alt={service.title} width={100} height={100} className="size-9" />
@@ -126,7 +126,7 @@ export default function Services() {
                                 style={service.buttonText ? { backgroundImage: "url(/Abstract-hero.svg)" } : undefined}
                             >
                                 <div className="flex items-center gap-4 justify-between">
-                                    <div className="flex items-center gap-6">
+                                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
                                         {
                                             service.icon &&
                                             <Image src={service.icon} alt={service.title} width={100} height={100} className="size-9" />

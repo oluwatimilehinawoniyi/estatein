@@ -26,7 +26,7 @@ export default function About() {
           <div className="border border-border p-4 rounded-lg gap-4 grid grid-cols-2 grid-rows-2 md-w-1/6">
             {values.map((item, index) => (
               <div className="space-y-2 bg-background-grey rounded-lg p-4" key={index}>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col md:flex-col items-start md:items-center gap-4">
                   <div className="size-10 overflow-hidden rounded-full p-2 border border-primary flex items-center justify-center">
                     <Image src={item.image} alt={item.title} width={100} height={100} className='' />
                   </div>

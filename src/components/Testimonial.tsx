@@ -1,3 +1,4 @@
+"use client";
 import { aboutTestimonial } from "@/data/AboutTestimonials";
 import { Testimonial } from "@/data/testimonials";
 import { LayoutGrid, Star, Zap } from "lucide-react";

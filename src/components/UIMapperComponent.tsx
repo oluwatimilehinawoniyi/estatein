@@ -1,8 +1,10 @@
+"use client"
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Button from "./atoms/Button";
 import { ElementType } from "react";
 import HeaderTextComponent from "./atoms/HeaderTextComponent";
 import UIWrapper from "./atoms/UIWrapper";
+import { useSlider } from "@/hooks/useSlider";
 
 interface UIMapperComponentProps<T> {
     title: string;
@@ -13,6 +15,8 @@ interface UIMapperComponentProps<T> {
 }
 
 export default function UIMapperComponent<T>({ title, description, button, data, Component }: UIMapperComponentProps<T>) {
+    const { sliderRef, handleNext, handlePrev, currentIndex, totalSlides } = useSlider(data);
+
     return (
         <UIWrapper className="space-y-6 ">
             <HeaderTextComponent
@@ -22,9 +26,8 @@ export default function UIMapperComponent<T>({ title, description, button, data,
             />
             <section className="overflow-hidden">
                 <div
-                    // drag="x"
-                    // dragConstraints={{ left: -300, right: 0 }}
-                    className="grid grid-flow-col grid-rows-1 gap-4 md:gap-6 overflow-x-scroll UI_Mapper cursor-grab active:cursor-grabbing">
+                    ref={sliderRef}
+                    className="grid grid-flow-col grid-rows-1 gap-4 md:gap-6 overflow-x-scroll UI_Mapper">
                     {data?.map((item, index) => (
                         <Component key={index} {...item} />
                     ))}
@@ -33,12 +36,12 @@ export default function UIMapperComponent<T>({ title, description, button, data,
 
             <div className="flex items-center justify-between">
                 {button && <Button className="w-max md:hidden">{button}</Button>}
-                <p className="hidden md:block">01 of 10</p>
+                <p className="hidden md:block">{currentIndex} of {totalSlides}</p>
 
                 <div className="w-max justify-between md:justify-normal flex items-center gap-4">
-                    <span className="border rounded-full p-1 cursor-pointer"><ArrowLeft /></span>
-                    <p className="md:hidden">01 of 10</p>
-                    <span className="border rounded-full p-1 cursor-pointer"><ArrowRight /></span>
+                    <span onClick={handlePrev} className="border rounded-full p-1 cursor-pointer"><ArrowLeft /></span>
+                    <p className="md:hidden">{currentIndex} of {totalSlides}</p>
+                    <span onClick={handleNext} className="border rounded-full p-1 cursor-pointer"><ArrowRight /></span>
                 </div>
             </div>
         </UIWrapper>

@@ -6,7 +6,7 @@ interface value {
 
 export const values: value[] = [
   {
-    title: "trust",
+    title: "profound trust",
     description:
       "Trust is the cornerstone of every successful real estate transaction.",
     image: "/icon/Star.svg",
@@ -18,7 +18,7 @@ export const values: value[] = [
     image: "/icon/union.svg",
   },
   {
-    title: "excellence",
+    title: "astute excellence",
     description:
       "We set the bar high for ourselves. From the properties we list to the services we provide.",
     image: "/icon/cap.svg",
