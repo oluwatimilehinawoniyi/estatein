@@ -50,7 +50,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                         </ul>
-                        <Button href="/contact" className="bg-background hover:bg-primary mt-auto">Contact Us</Button>
+                        <Button href="/contact" className="bg-background hover:bg-primary mtauto">Contact Us</Button>
                     </motion.div>
 
 
