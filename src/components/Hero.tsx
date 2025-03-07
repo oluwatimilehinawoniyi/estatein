@@ -20,7 +20,7 @@ export function Hero() {
                         {/* <!-- Attach text to the path --> */}
                         <text fill="white" fontSize="14" fontFamily="sans-serif" letterSpacing="2" className="animate-spin-reverse origin-center">
                             <textPath
-                                xlinkHref="#circlePath" textAnchor="middle" alignment-baseline="middle"
+                                href="#circlePath" textAnchor="middle" alignment-baseline="middle"
                                 dominant-baseline="middle" startOffset="50%">
                                 Let&apos;s Discover Your Dream Property With Estatein ✨
                             </textPath>
@@ -74,7 +74,7 @@ export function Hero() {
                     ))
                 }
             </div>
-        </UIWrapper>
+        </UIWrapper >
     )
 }
 export function AboutHero() {
