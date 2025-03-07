@@ -26,7 +26,9 @@ export function Hero() {
 
                         {/* <!-- Center arrow icon --> */}
                         <circle cx="100" cy="100" r="40" fill="var(--background-grey)" className="" />
-                        <text x="100" y="105" fill="white" fontSize="20" fontFamily="sans-serif" textAnchor="middle" className="animate-spins origin-center">↗</text>
+                        <text x="100" y="105" fill="white" fontSize="20" fontFamily="sans-serif" textAnchor="middle" className="animate-spins origin-center">
+                            &#x2198;
+                        </text>
                     </svg>
 
                     <div className="space-y-2">
