@@ -83,8 +83,8 @@ export default async function Page({
                         "Gourmet kitchen with top-of-the-line appliances",
                         "Private beach access for morning strolls and sunset views",
                         "Master suite with a spa-inspired bathroom and ocean-facing balcony",
-                        "Private garage and ample storage space"].map((item, index) => (
-                            <li className="flex items-center gap-2 border-l-2 pl-4 border-primary py-2 bg-background-grey" key={index}>
+                        "Private garage and ample storage space"].map((item) => (
+                            <li className="flex items-center gap-2 border-l-2 pl-4 border-primary py-2 bg-background-grey" key={item}>
                                 <Zap size={18} fill="white" />
                                 <p className="text-white/60">{item}</p>
                             </li>

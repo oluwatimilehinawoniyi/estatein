@@ -39,9 +39,9 @@ export default function Navbar() {
                     >
                         <Logo />
                         <ul className="flex flex-col gap-8 *:w-max">
-                            {['home', 'about', 'properties', 'services'].map((item) => (
+                            {['home', 'about', 'properties', 'services'].map((item, index) => (
                                 <Link
-                                    key={item}
+                                    key={index}
                                     href={item === 'home' ? '/' : `/${item}`}
                                     onClick={() => setIsOpen(false)}
                                     className="capitalize transition-colors hover:text-primary"
@@ -73,9 +73,9 @@ function NavLists() {
     return (
         <div className="hidden lg:flex justify-between items-center gap-8 lg:w-2/3">
             <ul className="flex items-center space-x-8 *:capitalize">
-                {['home', 'about', 'properties', 'services'].map((item) => (
+                {['home', 'about', 'properties', 'services'].map((item, index) => (
                     <Link
-                        key={item}
+                        key={index}
                         href={item === 'home' ? '/' : `/${item}`}
                         className={`${pathname === `/${item}` || (item === 'home' && pathname === '/') ? 'text-primary bg-background rounded-lg border border-border' : 'text-white'} transition-colors hover:text-primary py-2 px-4`}>{item}</Link>
                 ))}

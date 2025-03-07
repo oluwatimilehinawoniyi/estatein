@@ -7,6 +7,7 @@ import React, {
 } from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import Button from './Button'
 
 type UsePrevNextButtonsType = {
     prevBtnDisabled: boolean
@@ -58,14 +59,13 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
     return (
         <>
-            <button
-                className="disabled:opacity-50 flex size-12 items-center justify-center border rounded-full p-1"
-                type="button"
-                {...restProps}
+            <Button
+                className="disabled:opacity-50 flex size-12 items-center justify-center border rounded-full cursor-pointer p-1"
+                restProps={restProps}
             >
                 <ArrowLeft />
                 {children}
-            </button>
+            </Button>
         </>
     )
 }
@@ -74,13 +74,12 @@ export const NextButton: React.FC<PropType> = (props) => {
     const { children, ...restProps } = props
 
     return (
-        <button
-            className="disabled:opacity-50 flex size-12 items-center justify-center border rounded-full p-1"
-            type="button"
-            {...restProps}
+        <Button
+            restProps={restProps}
+            className="disabled:opacity-50 flex size-12 items-center justify-center border rounded-full cursor-pointer p-1"
         >
             <ArrowRight />
             {children}
-        </button>
+        </Button>
     )
 }

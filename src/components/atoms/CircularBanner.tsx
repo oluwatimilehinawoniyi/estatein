@@ -49,25 +49,12 @@ const CircularBanner = () => {
                     dur="15s"
                     repeatCount="indefinite" />
                 <g transform="translate(88, 88) scale(1)">
-                    <path d="M6 8L2 12L6 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6 8L2 12L6 16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M2 12H22" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </g>
             </g>
         </svg>
     );
 };
-
-// <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-left"><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg>
-
-// Add these CSS keyframes to your global CSS or style tag
-// @keyframes spin {
-//   from { transform: rotate(0deg); }
-//   to { transform: rotate(360deg); }
-// }
-
-// @keyframes spin-reverse {
-//   from { transform: rotate(0deg); }
-//   to { transform: rotate(-360deg); }
-// }
 
 export default CircularBanner;

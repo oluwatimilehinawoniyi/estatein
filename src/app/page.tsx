@@ -1,4 +1,3 @@
-// import Carousel from "@/components/atoms/Carousel";
 import FAQCard from "@/components/FAQCard";
 import { Hero } from "@/components/Hero";
 import PropertyCard from "@/components/PropertyCard";
@@ -21,8 +20,6 @@ export default function Home() {
           data={properties}
           Component={PropertyCard}
         />
-{/* 
-        <Carousel slides={properties} options={{ dragFree: true }} Component={PropertyCard} /> */}
 
         <UIMapperComponent
           title="what our clients say"

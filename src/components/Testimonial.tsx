@@ -13,7 +13,7 @@ export function TestimonialCardOne({
     image,
 }: Testimonial) {
     return (
-        <div className="bg-background border-border border rounded-2xl text-white min-w-[320px] w-[320px] md:w-[350px] md:min-w-[350px] lg:w-[380px] lg:min-w-[380px] p-4 max-w-lg space-y-6">
+        <div className="bg-background border-border border rounded-2xl text-white min-w-[320px] w-[320px] md:w-[350px] md:min-w-[350px] lg:w-[380px] lg:min-w-[380px] p-4 max-w-lg space-y-6" >
             <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, index) => (
                     <Star
@@ -75,6 +75,6 @@ export function TestimonialCardTwo({ category, company, domain, testimonial, web
                 <p className="capitalize text-sm md:text-base font-medium leading-[150%] text-white/60">what they said</p>
                 <p className="font-semibold text-sm md:text-base line-clamp-3">{testimonial}</p>
             </div>
-        </div>
+        </ div>
     )
 }
