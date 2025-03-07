@@ -2,6 +2,7 @@ import Button from "@/components/atoms/Button";
 import Image from "next/image";
 import Stars from "./atoms/Stars";
 import UIWrapper from "./atoms/UIWrapper";
+import CircularBanner from "./atoms/CircularBanner";
 
 export function Hero() {
     return (
@@ -11,29 +12,10 @@ export function Hero() {
                     <Image src="/images/hero.png" alt="hero" className="bg-center object-cover object-center bg-cover bg-no-repeat rounded-2xl border border-white/5" fill style={{ backgroundImage: "url(/Abstract-hero.svg)" }} />
                 </div>
                 <div className="w-full flex flex-col gap-4 justify-between relative pt-4 md:pt-0 md:gap-8">
-                    <svg width="100" height="100" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="bg-background absolute block -top-20 translate-y-ful rounded-full border-border border md:-right-20 md:top-16">
-                        {/* <!-- Define a circle path --> */}
-                        <defs>
-                            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
-                        </defs>
+                    <CircularBanner />
 
-                        {/* <!-- Attach text to the path --> */}
-                        <text fill="white" fontSize="14" fontFamily="sans-serif" letterSpacing="2" className="animate-spin-reverse origin-center">
-                            <textPath
-                                href="#circlePath" textAnchor="middle" alignment-baseline="middle"
-                                dominant-baseline="middle" startOffset="50%">
-                                Let&apos;s Discover Your Dream Property With Estatein ✨
-                            </textPath>
-                        </text>
 
-                        {/* <!-- Center arrow icon --> */}
-                        <circle cx="100" cy="100" r="40" fill="var(--background-grey)" className="" />
-                        <g>
-                            <text x="100" y="105" fill="white" fontSize="20" fontFamily="sans-serif" textAnchor="middle" className="animate-spins origin-center">
-                                &#x2198;
-                            </text>
-                        </g>
-                    </svg>
+
 
                     <div className="space-y-2">
                         <h1 className="lg:text-[46px] md:text-[38px] font-semibold text-[28px] leading-[120%] capitalize md:w-5/6 lg:w-4/5">Discover your dream property with estatein</h1>
